@@ -1,25 +1,37 @@
 *{
-  margin: 0;padding: 0;font-family: Sans-Serif;
+  margin: 0;padding: 0;font-family: 'Roboto', sans-serif;
 }
 body{
-  margin: 0;padding: 0;background: url("sq.jpg") no-repeat center fixed;
+  margin: 0;padding: 0;background: url(" ") no-repeat center fixed;
   background-size: cover;color: black;font-family: Sans-Serif;
 }
 .grid{
-  display: grid; grid-template-columns: 270px 500px 200px;
-}
-.blank{
-  opacity: ;
+  display: grid; grid-template-columns: auto 270px 500px 200px auto;height: 80vh;
 }
 .col1 .blank {
-  height: 70px;
+  height: 70px;animation-name: c1blank;animation-duration: 2s;animation-timing-function: ease-out;
+}
+@keyframes c1blank{
+  from{
+    height: 200px;
+  }
+  to{
+    
+  }
 }
 #col3 .blank{
-  min-height: 200px;
+  height: 200px;animation-name: c3blank;animation-duration: 2s;animation-timing-function: ease-out;
 }
-
+@keyframes c3blank{
+  from{
+    height: 330px;
+  }
+  to{
+    
+  }
+}
 #col1{
-  
+  grid-column: 2 / 3;user-select: none;
 }
 .col1 div{
   width: 250px;margin: 30px auto;
@@ -54,13 +66,8 @@ body{
 .connect div i{
   margin: 10px 10px;
 }
-
-#col2{
-  
-}
-
 #col3{
-  
+  user-select: none;grid-column: 4/5;
 }
 #col3 div{
   width: 180px;padding: 5px;box-sizing: border-box;float: right;margin-bottom: 15px;transition: 0.3s ease-in-out;
@@ -97,5 +104,8 @@ body{
 }
 
 
+#col2{
+  grid-column: 3/4;
+}
 
 
