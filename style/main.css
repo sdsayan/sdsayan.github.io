@@ -1,23 +1,33 @@
 *{
   margin: 0;padding: 0;font-family: 'Roboto', sans-serif;
-  border: 0.1px solid red;
+  border: 0.0px solid red;
 }
 body{
   margin: 0;padding: 0;background: url("../pexels-.jpg") no-repeat center fixed;
   background-size: cover;color: black;font-family: Sans-Serif;
 }
 .grid{
-  display: grid; grid-template-columns: auto 270px 500px 200px auto;height: 80vh;
+  display: grid; grid-template-columns: auto 270px 500px 200px auto;grid-template-rows: 60px auto 60px;
 }
-
+#header{
+  grid-column: 2/5;grid-row: 1/2;
+}
 #col1{
-  grid-column: 2 / 3;user-select: none;
+  grid-column: 2 / 3;user-select: none;grid-row: 2/3;
 }
 #col3{
-  user-select: none;grid-column: 4/5;
+  user-select: none;grid-column: 4/5;grid-row: 2/3;
 }
 #col2{
-  grid-column: 3/4;
+  grid-column: 3/4;grid-row: 2/3;
 }
 
-
+.space1,.space2{
+  background-color: rgba(0,0,0,0.5);grid-row: 0/1;
+}
+.space1{
+  grid-column: 0/1;
+}
+.space2{
+  grid-column: 5/6;
+}
